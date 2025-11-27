@@ -12,7 +12,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+    background: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -40,7 +40,7 @@ body {
 
 .navbar-logo img {
     height: 40px;
-    width: 40px;
+    width: 160px;
 }
 
 .nav-menu {
@@ -51,14 +51,14 @@ body {
     margin-left: 3rem;
 }
 
-.nav-link {
-    color: white;
+.nav-menu a {
+    color: black;
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-menu a:hover {
     color: #ffd700;
 }
 
@@ -82,7 +82,6 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #3d2a5c 0%, #2d1b4e 50%, #1a0f2e 100%);
     color: white;
     padding: 4rem 2rem;
     min-height: 100vh;
@@ -90,11 +89,66 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.hero-layers {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 100ms ease;
+    z-index: 0;
+}
+
+.hero-layer:nth-of-type(1) {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Animation: 12 second cycle (3 sec per image) */
+@keyframes cycle-1 {
+    0%, 24% { opacity: 1; z-index: 2; }
+    25%, 100% { opacity: 0; z-index: 0; }
+}
+
+@keyframes cycle-2 {
+    0%, 24% { opacity: 0; z-index: 0; }
+    25%, 49% { opacity: 1; z-index: 2; }
+    50%, 100% { opacity: 0; z-index: 0; }
+}
+
+@keyframes cycle-3 {
+    0%, 49% { opacity: 0; z-index: 0; }
+    50%, 74% { opacity: 1; z-index: 2; }
+    75%, 100% { opacity: 0; z-index: 0; }
+}
+
+@keyframes cycle-4 {
+    0%, 74% { opacity: 0; z-index: 0; }
+    75%, 99% { opacity: 1; z-index: 2; }
+    100% { opacity: 0; z-index: 0; }
+}
+
+.hero:hover .hero-layer:nth-of-type(1) { animation: cycle-1 12s infinite; }
+.hero:hover .hero-layer:nth-of-type(2) { animation: cycle-2 12s infinite; }
+.hero:hover .hero-layer:nth-of-type(3) { animation: cycle-3 12s infinite; }
+.hero:hover .hero-layer:nth-of-type(4) { animation: cycle-4 12s infinite; }
 
 .hero-content {
     max-width: 1000px;
+    position: relative;
+    z-index: 5;
 }
+
 
 .hero-title {
     font-size: 3.5rem;
@@ -108,92 +162,6 @@ body {
     margin-bottom: 3rem;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
-}
-
-/* People Grid */
-.people-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 0.8rem;
-    margin: 3rem 0;
-    height: 300px;
-}
-
-.person {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: float 3s ease-in-out infinite;
-}
-
-.person:nth-child(1) {
-    grid-column: span 2;
-    animation-delay: 0s;
-}
-
-.person:nth-child(2) {
-    grid-column: span 2;
-    animation-delay: 0.1s;
-}
-
-.person:nth-child(3) {
-    grid-column: span 2;
-    animation-delay: 0.2s;
-}
-
-.person:nth-child(4) {
-    grid-column: span 2;
-    animation-delay: 0.3s;
-}
-
-.person:nth-child(5) {
-    grid-column: span 2;
-    animation-delay: 0.4s;
-}
-
-.person:nth-child(6) {
-    grid-column: span 2;
-    animation-delay: 0.5s;
-}
-
-.person:nth-child(7) {
-    grid-column: span 2;
-    animation-delay: 0s;
-}
-
-.person:nth-child(8) {
-    grid-column: span 2;
-    animation-delay: 0.1s;
-}
-
-.person:nth-child(9) {
-    grid-column: span 2;
-    animation-delay: 0.2s;
-}
-
-.person:nth-child(10) {
-    grid-column: span 2;
-    animation-delay: 0.3s;
-}
-
-.person:nth-child(11) {
-    grid-column: span 2;
-    animation-delay: 0.4s;
-}
-
-.person:nth-child(12) {
-    grid-column: span 2;
-    animation-delay: 0.5s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 .main-heading {
@@ -293,15 +261,6 @@ body {
         max-width: 300px;
         justify-content: center;
     }
-
-    .people-grid {
-        grid-template-columns: repeat(6, 1fr);
-        height: 200px;
-    }
-
-    .person {
-        grid-column: span 1 !important;
-    }
 }
 
 @media (max-width: 480px) {
@@ -326,11 +285,75 @@ body {
     }
 }
 
-/* Container */
-.container {
+/* About Section */
+.about-section {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #2d1b4e;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.about-tagline {
+    color: #00bcd4;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.btn-learn-more {
+    background: #d4af37;
+    color: #333;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-learn-more:hover {
+    background: #e5c158;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Courses Section */
@@ -363,19 +386,7 @@ body {
 .course-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.course-image.foundational {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.course-image.apprenticeship {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.course-image.advanced {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    object-fit: cover;
 }
 
 .course-card h3 {
@@ -432,7 +443,7 @@ body {
     position: absolute;
     width: 250px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.2);
+    object-fit: cover;
     border-radius: 8px;
     border: 3px solid rgba(255, 255, 255, 0.3);
 }
@@ -531,19 +542,16 @@ body {
 .program-image {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    object-fit: cover;
     border-radius: 8px;
 }
 
 /* Summit Section */
-.summit-section {
+.summit {
     padding: 3rem 2rem;
     background: linear-gradient(90deg, #0f3a5e 0%, #2d5a8c 50%, #1a0f2e 100%);
     color: white;
-}
-
-.summit-content {
-    display: grid;
+     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     align-items: center;
@@ -551,7 +559,9 @@ body {
     margin: 0 auto;
 }
 
-.ug-dev-logo {
+
+
+.summit-logo {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 1rem;
@@ -559,14 +569,14 @@ body {
     border-radius: 4px;
     text-align: center;
 }
-
-.summit-middle h2 {
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.summit-right {
-    text-align: center;
+.summit-btn {
+    background: #d4af37;
+    color: #333;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 /* Footer */
@@ -623,45 +633,3 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .success-content {
-        grid-template-columns: 1fr;
-    }
-
-    .program-content {
-        grid-template-columns: 1fr;
-    }
-
-    .summit-content {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .partners {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 480px) {
-    .courses-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat h3 {
-        font-size: 2rem;
-    }
-
-    .success-images {
-        height: 200px;
-    }
-
-    .photo {
-        width: 150px;
-        height: 120px;
-    }
-}
