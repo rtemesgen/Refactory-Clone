@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refactory - Transforming Africa's Tech Talent for the Future</title>
+    <title>Refactory Academy - Empowering Uganda's Next Generation of Tech Talent</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <img src="Refactory-Logo.png" alt="Refactory Logo">
-                <span>refactory</span>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="image/Refactory-Logo.png" alt="Refactory Logo">
             </div>
             <ul class="nav-menu">
-                <li ><a href="#about">About Us</a></li>
-                <li ><a href="#courses"  >Courses</a></li>
-                <li ><a href="#financial" >Financial Aid</a></li>
-                <li ><a href="#tech-talent"  >Tech Talent</a></li>
-                <li ><a href="#partnerships"  >Partnerships</a></li>
-                <li ><a href="#stories" >Stories</a></li>
-                <li ><a href="#contact"  >Contact</a></li>
-                <li ><a href="#faqs"  >FAQs</a></li>
+                <li class="dropdown">
+                    <a href="#about">About Us <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://refactory.academy/about-us/">Who We Are</a></li>
+                        <li><a href="https://refactory.academy/safeguarding/">Safeguarding</a></li>
+                        <li><a href="https://refactory.academy/disability-inclusion/">Disability Inclusion</a></li>
+                        <li><a href="https://refactory.academy/careers/">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#courses">Courses <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://refactory.academy/programs/#foundational">Foundational Courses</a></li>
+                        <li><a href="https://refactory.academy/programs/#apprenticeship">Apprenticeship Program</a></li>
+                        <li><a href="https://refactory.academy/programs/#advanced">Advanced Courses</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#financial">Financial Aid <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://refactory.academy/financial-aid/10x-program/">10X Program</a></li>
+                        <li><a href="https://refactory.academy/financial-aid/skills-for-digital-jobs/">Skills for Digital Jobs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#talent">Tech Talent</a></li>
+                <li><a href="#partnerships">Partnerships</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faqs">FAQs</a></li>
             </ul>
             <button class="search-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -33,173 +54,221 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Background layers (cover entire hero). Cycle on hover via CSS animation. -->
-        <div class="hero-layers" >
-            <div class="hero-layer" style="background-image: url('image/hero1.png');"></div>
-            <div class="hero-layer" style="background-image: url('image/hero2.png');"></div>
-            <div class="hero-layer" style="background-image: url('image/hero3.png');"></div>
-            <div class="hero-layer" style="background-image: url('image/hero4.jpeg');"></div>
-        </div>
-
-        <div class="hero-content">
-            <h1 class="hero-title">The Digital Solutions Expo</h1>
-            <p class="hero-subtitle">10th Annual Showcase: Equipping young entrepreneurs in advanced digital marketing skills & innovative workforce solutions</p>
-            
-      
-
-            <h2 class="main-heading">Transforming Africa's Tech Talent for the Future</h2>
-            <p class="main-subtitle">Tech programs by and for the Tech Industry</p>
-
-            <div class="cta-buttons">
-                <button class="btn btn-primary">Partner with us <span>→</span></button>
-                <button class="btn btn-secondary">Explore Programs <span>→</span></button>
-                <button class="btn btn-tertiary">Hire Talent <span>→</span></button>
+    <!-- Transformation Hero -->
+    <section class="transformation-hero">
+        <div class="transformation-overlay">
+            <div class="transformation-bottom-content">
+                <h1>Transforming Africa's Tech Talent for the Future</h1>
+                <p>Tech programs by and for the Tech Industry</p>
+                <div class="transformation-buttons">
+                    <a href="https://refactory.academy/partnerships/">
+                    <button class="btn-purple">Partner with us →</button>
+                    </a>
+                    <a href="https://refactory.academy/programs/">
+                    <button class="btn-yellow">Explore Programs →</button>
+                    </a>
+                    <a href="https://refactory.academy/hire-talent/">
+                    <button class="btn-white">Hire Talent →</button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Refactory Academy</h2>
-                    <p class="about-tagline">Empowering Uganda's Next Generation of Tech Talent</p>
-                    <p>Refactory is a software-skilling academy addressing the need to produce skilled software developers in Uganda today. We are training the next generation of software developer talent and experts responsive to the needs of the ecosystem.</p>
-                    <p>Refactory Academy is revolutionizing the tech industry in Uganda by blending essential in-demand tech skills with soft skills needed by the tech industry.</p>
-                    <button class="btn-learn-more">Learn more →</button>
-                </div>
-                <div >
-                    <img class="about-image" src="image/about-team.jpg" alt="Refactory ">
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Refactory Academy</h1>
+                <h2>Empowering Uganda's Next Generation of Tech Talent</h2>
+                <p>Refactory is a software-skilling academy addressing the need to produce skilled software developers in Uganda today. We are training the next generation of software developer talent and experts responsive to the needs of the ecosystem.</p>
+                <p>Refactory Academy is revolutionizing the tech industry in Uganda by blending essential in-demand tech skills with soft skills needed by the tech industry.</p>
+             <a href="https://refactory.academy/about-us/">
+                <button class="cta-button">Learn more →</button>
+            </a>
+            </div>
+            <div class="hero-image">
+                <img src="image/about-team.jpg" alt="Refactory Team">
             </div>
         </div>
     </section>
 
     <!-- Courses Section -->
-    <section class="courses-section">
-        <div class="container">
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div > <img class="course-image foundational" src="image/foundational.jpg" alt="Refactory"></div>
-                    <h3>Foundational Courses</h3>
-                    <p>Our foundational courses are designed to equip learners with core competencies and skills required to thrive in the dynamic and rapidly evolving digital landscape.</p>
-                    <button class="btn-learn">Learn more</button>
-                </div>
-                <div class="course-card">
-                    <div > <img class="course-image apprenticeship" src="image/apprenticeship.jpg" alt="refactory"></div>
-                    <h3>Apprenticeship Course</h3>
-                    <p>Our apprenticeship course is an experiential learning program that provides hands-on training and real-world experience with industry partners.</p>
-                    <button class="btn-learn">Learn more</button>
-                </div>
-                <div class="course-card">
-                    <div > <img class="course-image advanced" src="image/advanced.jpeg" alt="Refactory"></div>
-                    <h3>Advanced Courses</h3>
-                    <p>Our advanced courses are designed to equip experienced professionals with specialized skills required for career advancement and leadership.</p>
-                    <button class="btn-learn">Learn more</button>
-                </div>
+    <section class="courses">
+        <div class="courses-header">
+            <h4 class="courses-subtitle">Start Your Dream Career!</h4>
+            <h2 class="courses-title">Explore Featured Courses</h2>
+        </div>
+        <div class="courses-container">
+            <div class="course-card">
+                <img src="image/foundational.jpg" alt="Foundational Courses">
+                <h3>Foundational Courses</h3>
+                <p>These courses build the essential knowledge and skills needed to thrive in more advanced or specialized tech fields.</p>
+                <a href="https://refactory.academy/programs/#foundational">
+                <button class="learn-more">Learn more</button>
+                </a>
+            </div>
+            <div class="course-card">
+                <img src="image/apprenticeship.jpg" alt="Apprenticeship Course">
+                <h3>Apprenticeship Course</h3>
+                <p>Designed to provide aspiring software developers with technical training and industry-led mentorship.</p>
+                <a href="https://refactory.academy/programs/#apprenticeship">   
+                <button class="learn-more">Learn more</button>
+                </a>    
+            </div>
+            <div class="course-card">
+                <img src="image/advanced.jpeg" alt="Advanced Courses">
+                <h3>Advanced Courses</h3>
+                <p>Go beyond the basics to develop mastery in high-demand fields, prepare for innovation-driven careers.</p>
+                <a href="https://refactory.academy/programs/#advanced">
+                <button class="learn-more">Learn more</button>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Success Section -->
-    <section class="success-section">
-        <div class="container">
-            <div class="success-content">
-                <div class="success-images">
-                    <div > <img class="photo photo-1" src="image/success1.jpeg" alt=""> </div>
-                    <div > <img class="photo photo-2" src="image/success2.jpg" alt=""> </div>
+    <!-- Success Stats -->
+    <section class="success-stats">
+        <div class="stats-container">
+            <div class="stats-images">
+                <div class="image-card top-image">
+                    <img src="image/success2.jpg" alt="Students">
                 </div>
-                <div class="success-stats">
-                    <h2>Refactory's Success!</h2>
-                    <div class="stats-grid">
-                        <div class="stat">
-                            <h3>814+</h3>
-                            <p>Graduates</p>
-                        </div>
-                        <div class="stat">
-                            <h3>91%</h3>
-                            <p>Employment rates</p>
-                        </div>
-                        <div class="stat">
-                            <h3>95%</h3>
-                            <p>Student satisfaction rate</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3000+</h3>
-                            <p>Impacted through outreach activities</p>
-                        </div>
+                <div class="image-card bottom-image">
+                    <img src="image/success1.jpeg" alt="Digital Skills">
+                </div>
+            </div>
+            <div class="stats-content">
+                <h2>Refactory's Success!</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">814+</div>
+                        
+                        <div class="stat-label">Graduates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">91%</div>
+                        <div class="stat-label">Employment rates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Student satisfactory rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3000+</div>
+                        <div class="stat-label">Impacted through outreach activities</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10X Program Section -->
-    <section class="program-section">
-        <div class="container">
+    <!-- 10X Program -->
+    <section class="program-10x">
+        <div class="program-container">
             <div class="program-content">
-                <div class="program-text">
-                    <h2>10X Program</h2>
-                    <h3>Inclusively Equipping Young Women in Advanced Digital Skills & Connecting Them to Dignified Work</h3>
-                    <p>Refactory's 10x program is a young women with gender considerations, skills and life-management training to improve employability and support them to secure dignified work and economic independence.</p>
-                    <div class="partners">
-                        <div class="partner-logo">Utbox</div>
-                        <div class="partner-logo">CEDC</div>
-                        <div class="partner-logo">Mastercard</div>
+                <h2>10X Program</h2>
+                <h3>Inclusively Equipping Young Women in Advanced Digital Skills & Connecting Them to Dignified Work</h3>
+                <p>Refactory Academy is empowering young women with relevant tech skills and life-changing opportunities, equipping them to thrive in the digital economy as individuals and as business owners.</p>
+                <div class="program-logos">
+                    <div class="partnership-text">In partnership with</div>
+                    <div class="logos-row">
+                        <div class="logo-item">
+                            <a href="https://outbox.africa/">
+                            <img src="image/Outbox-1.png" alt="Outbox" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.uncdf.org/">
+                            <img src="image/UNCDF.png" alt="UNCDF" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://mastercardfdn.org/">
+                            <img src="image/Mastercard-Foundation.png" alt="Mastercard Foundation" class="partner-logo">
+                            </a>
+                        </div>
                     </div>
-                    <button class="btn-learn-primary">Learn more</button>
                 </div>
-                <div>
-                    <img class="program-image" src="image/programlogo.jpg" alt="Refactory 10X Program">
+                <a href="https://refactory.academy/financial-aid/10x-program/">
+                <button class="learn-more-white">Learn more →</button>
+                </a>
+            </div>
+            <div class="program-image">
+                <img src="image/programlogo.jpg" alt="Training Session">
+            </div>
+        </div>
+    </section>
+
+    <!-- UG Dev Summit -->
+    <section class="ug-dev-summit">
+        <div class="summit-overlay">
+            <div class="summit-container">
+                <div class="summit-tagline">Engage . Learn . Connect</div>
+                <div class="summit-content">
+                    <div class="summit-logo">
+                        <img src="image/UG-Dev-Summit-Logo-White-1920x825.png" alt="UG Dev Summit Logo">
+                    </div>
+                    <h1>Convener of the UG Dev Summit</h1>
+                    <a href="https://ugdevsummit.io/">
+                    <button class="btn-yellow-small" >Learn more →</button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UG Dev Summit Section -->
-    <section class="summit">
-        <div class="summit-logo">UG Dev Summit</div>
-            <h2 class="summit-title">Convener of the UG Dev Summit</h2>
-            <button class="summit-btn">Learn more</button>
-    </section>
-
-    <!-- Footer Section -->
+     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <img  src="image/Refactory-Logo-White.png" alt="Refactory" height="40" width="160">
-                    <p>Refactory is a Tech skilling Academy. We are the industry’s blueprint for hiring software talent.</p>
-                    
+                    <p>Refactory is a Tech skilling Academy. We are the industry's blueprint for hiring software talent.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/RefactoryAcademy/" target="_blank" class="social-icon">
+                            <img src="image/facebook icon.jpeg" alt="Facebook">
+                        </a>
+                        <a href="https://twitter.com/refactory_acad/" target="_blank" class="social-icon">
+                            <img src="image/twitter.jpeg" alt="Twitter">
+                        </a>
+                        <a href="https://www.instagram.com/refactory_acad/" target="_blank" class="social-icon">
+                            <img src="image/instagram icon.jpeg" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/refactoryug/" target="_blank" class="social-icon">
+                            <img src="image/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.youtube.com/@refactoryacademy" target="_blank" class="social-icon">
+                            <img src="image/youtube.jpeg" alt="YouTube">
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Resources</h3>
+                    <h3 style="color:#70bfe6">Resources</h3>
                     <ul>
-                        <li><a href="#">Stories</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://refactory.academy/stories/">Stories</a></li>
+                        <li><a href="https://refactory.academy/blogs/">Blogs</a></li>
+                        <li><a href="https://refactory.academy/faqs/">FAQs</a></li>
+                        <li><a href="https://refactory.academy/testimonials/">Testimonials</a></li>
+                        <li><a href="https://refactory.academy/privacy-policy/">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Get in touch</h3>
+                    <h3 style="color:#70bfe6">Get in touch</h3>
                     <ul>
 
-                        <li><a href="#">+256 (0) 393254046</a></li>
-                        <li><a href="#">+256 (0) 759243109</a></li>
-                        <li><a href="#">partnerships@refactory.academy</a></li>
-                        <li><a href="#">study@refactory.academy</a></li>
+                        <li><a href="tel:+256%20(0)%20393254046">+256 (0) 393254046</a></li>
+                        <li><a href="tel:+256%20(0)%20759243109">+256 (0) 759243109</a></li>
+                        <li><a href="mailto:partnerships@refactory.academy">partnerships@refactory.academy</a></li>
+                        <li><a href="mailto:study@refactory.academy">study@refactory.academy</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Visit us</h3>
+                    <h3 style="color:#70bfe6">Visit us</h3>
                     <ul>
-                        <li><a href="#">Kampala, Uganda Office</a></li>
-                        <li><a href="#">Kigali International University</a></li>
-                        <li><a href="#">Location</a></li>
+                       <p> <li>Refactory Academy, 2nd Floor, Clarke International University. Kawagga Close off Kalungi Road, Muyenga</li></p>
+                        
+                        <li><a style="color:#70bfe6" href="https://goo.gl/maps/fVVa5rDDMBYmMEir7">Location</a></li>
                     </ul>
                 </div>
             </div>
